@@ -11,7 +11,6 @@ var WebpackDevServer = require('webpack-dev-server'),
 
 var options = config.chromeExtensionBoilerplate || {};
 var excludeEntriesToHotReload = options.notHotReload || [];
-
 for (var entryName in config.entry) {
   if (excludeEntriesToHotReload.indexOf(entryName) === -1) {
     config.entry[entryName] = [
@@ -47,6 +46,13 @@ var server = new WebpackDevServer(
       'Access-Control-Allow-Origin': '*',
     },
     allowedHosts: 'all',
+    proxy: {
+      '/api': {
+        target: 'http://10.220.11.11:18002',
+        // pathRewrite: { '^/api': '' },
+        changeOrigin: true,
+      },
+    }
   },
   compiler
 );

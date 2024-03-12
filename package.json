@@ -1,11 +1,11 @@
 {
-  "name": "chrome-extension-boilerplate-react",
-  "version": "5.0.4",
-  "description": "A chrome extension boilerplate built with React 18, Webpack 5, and Webpack Dev Server 4",
+  "name": "chrome-react-1",
+  "version": "0.0.1",
+  "description": "一个react开发的浏览器插件",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lxieyang/chrome-extension-boilerplate-react.git"
+    "url": "https://github.com/SpongeBoooob/SpongeBob.git"
   },
   "scripts": {
     "build": "node utils/build.js",
@@ -13,6 +13,9 @@
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
+    "@ant-design/icons": "~4.7.0",
+    "antd": "5.2.3",
+    "axios": "^1.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -11,7 +11,9 @@ var ReactRefreshTypeScript = require('react-refresh-typescript');
 
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
-var alias = {};
+var alias = {
+  '@': path.resolve(__dirname, 'src')
+};
 
 // load the secrets
 var secretsPath = path.join(__dirname, 'secrets.' + env.NODE_ENV + '.js');
@@ -42,7 +44,7 @@ var options = {
     options: path.join(__dirname, 'src', 'pages', 'Options', 'index.jsx'),
     popup: path.join(__dirname, 'src', 'pages', 'Popup', 'index.jsx'),
     background: path.join(__dirname, 'src', 'pages', 'Background', 'index.js'),
-    contentScript: path.join(__dirname, 'src', 'pages', 'Content', 'index.js'),
+    contentScript: path.join(__dirname, 'src', 'pages', 'Content', 'index.jsx'),
     devtools: path.join(__dirname, 'src', 'pages', 'Devtools', 'index.js'),
     panel: path.join(__dirname, 'src', 'pages', 'Panel', 'index.jsx'),
   },
